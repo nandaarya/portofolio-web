@@ -1,0 +1,48 @@
+.about-me{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+#profile-image{
+    width: 200px;
+    height: 200px;
+    margin: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    align-items: center;
+}
+
+.project-image {
+    width: 150px;
+    height: 150px;
+    margin: 24px;
+    object-fit: cover;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.skill-image {
+    width: 50px;
+    height: 50px;
+    margin: 24px;
+}

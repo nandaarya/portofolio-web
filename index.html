@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portofolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <header>
         <h1>Nanda Arya Putra</h1>
@@ -12,7 +15,7 @@
             <ul>
                 <li><a href="index.php">About Me</a></li>
                 <li><a href="about.php">My Project</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="contact.php">Skill</a></li>
             </ul>
         </nav>
     </header>
@@ -20,14 +23,65 @@
         <div id="content">
             <article>
                 <h2>About Me</h2>
-                <img src="assets\image\nanda.jpg" alt="Nanda Arya Putra">
-                <p>My name is Nanda Arya Putra. I am a student at Sunan Kalijaga State Islamic University majoring in informatics. I specialize in mobile development (Android). Apart from that, I have also studied other fields such as backend and machine learning. I'm so excited to learn something new!</p>
+                <div class="about-me">
+                    <img src="assets\image\nanda.jpg" alt="Nanda Arya Putra" id="profile-image">
+                    <p>My name is Nanda Arya Putra. I am a student at Sunan Kalijaga State Islamic University majoring
+                        in informatics. I specialize in mobile development (Android). Apart from that, I have also
+                        studied other fields such as backend and machine learning. I'm so excited to learn something
+                        new!</p>
+                </div>
             </article>
             <article>
                 <h2>My Project</h2>
+                <div class="project-container">
+                    <div class="project-item">
+                        <img src="assets\image\tara.png" alt="TARA" class="project-image">
+                        <h3>TARA</h3>
+                        <p>TARA or Tourist Attractions Recommender App is a free application that can help users find suitable tourist attractions and provide transportation suggestions and ease of reaching tourist locations.</p>
+                    </div>
+                    <div class="project-item">
+                        <img src="assets\image\sukame.png" alt="Suka Messenger" class="project-image">
+                        <h3>Suka Messenger</h3>
+                        <p>Suka Messenger is a real-time communication application designed to facilitate instant messaging between users. It allows for seamless text messaging and file sharing through various interfaces, including web and mobile applications. The system is built to ensure fast and reliable communication.</p>
+                    </div>
+                    <div class="project-item">
+                        <img src="assets\image\sukame.png" alt="SIMAK UIN SUKA" class="project-image">
+                        <h3>SIMAK UIN SUKA</h3>
+                        <p>Application to assist the process of scheduling and attendance at the university using QR Code</p>
+                    </div>
+                </div>
             </article>
             <article>
-                <h2>Contact</h2>
+                <h2>Skill</h2>
+                <div class="skill-container">
+                    <div id="skill-item">
+                        <img src="assets\image\android.png" alt="Android" class="skill-image">
+                    </div>
+                    <div id="skill-item">
+                        <img src="assets\image\kotlin.png" alt="Kotlin" class="skill-image">
+                    </div>
+                    <div id="skill-item">
+                        <img src="assets\image\android-studio.png" alt="Android Studio" class="skill-image">
+                    </div>
+                    <div id="skill-item">
+                        <img src="assets\image\flutter.png" alt="Flutter" class="skill-image">
+                    </div>
+                    <div id="skill-item">
+                        <img src="assets\image\dart.png" alt="Dart" class="skill-image">
+                    </div>
+                    <div id="skill-item">
+                        <img src="assets\image\html.png" alt="HTML" class="skill-image">
+                    </div>
+                    <div id="skill-item">
+                        <img src="assets\image\css.png" alt="CSS" class="skill-image">
+                    </div>
+                    <div id="skill-item">
+                        <img src="assets\image\javascript.png" alt="Javascript" class="skill-image">
+                    </div>
+                    <div id="skill-item">
+                        <img src="assets\image\figma.png" alt="Figma" class="skill-image">
+                    </div>
+                </div>
             </article>
         </div>
     </main>
@@ -35,4 +89,5 @@
         <p>&copy; 2024 My Portofolio</p>
     </footer>
 </body>
+
 </html>
