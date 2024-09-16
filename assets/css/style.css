@@ -1,12 +1,23 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: blue;
-    margin: 48px;
+    background-color: #00ADB5;
+    margin: 60px;
     font-family: Arial, sans-serif;
+    color: #EEEEEE;
 }
 
 .header {
-    background-color: aqua;
     text-align: center;
+    padding: 24px;
+    background-image: url(../image/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #EEEEEE;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .header nav {
@@ -16,49 +27,50 @@ body {
     margin-top: 36px;
 }
 
+.header nav a {
+    color: #EEEEEE;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.header nav a:hover {
+    color: lightgray;
+}
+
 .main {
     display: flex;
     flex-direction: row;
-    background-color: red;
+    background-color: #222831;
 }
 
 .content {
-    width: 2500px;
     padding: 24px;
 }
 
-.aside {
-    background-color: yellow;
-    width: 700px;
-    padding: 24px;
+#about-me-text {
     text-align: justify;
-}
-
-.about-me{
-    text-align: justify;
-}
-
-#profile-image{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
+    color: #EEEEEE;
 }
 
 .project-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 .project-item {
+    display: flex;
+    flex-direction: column;
     width: 180px;
     padding: 24px;
+    margin: 8px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     align-items: center;
     text-align: justify;
+    background-color: #EEEEEE;
+    color: black;
 }
 
 .project-image {
@@ -71,15 +83,192 @@ body {
 .skill-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    overflow-x: auto;
 }
 
 .skill-image {
     width: 50px;
     height: 50px;
-    margin: 24px;
+    padding: 8px;
+}
+
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mySlides {
+    display: none;
+}
+
+.slide-image {
+    width: 600px;
+    height: 400px;
+    object-fit: contain;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 16px;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.aside {
+    min-width: 270px;
+    background-color: #393E46;
+    padding: 24px;
+    text-align: justify;
+}
+
+.aside ul li a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+.aside ul li a:hover {
+    color: lightgray;
+}
+
+.profile-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+#profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contact-image {
+    width: 40px;
+    height: 40px;
 }
 
 .footer {
-    background-color: aqua;
+    background-color: #222831;
     text-align: center;
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 0px;
+        overflow-y: auto;
+
+    }
+
+    .header {
+        padding: 8px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: #393E46;
+    }
+
+    .slide-image {
+        width: 250px;
+        height: 200px;
+        object-fit: contain;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    body {
+        margin: 0px;
+    }
+
+    .header {
+        padding: 8px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: #393E46;
+    }
+
+    #profile-image {
+        width: 400px;
+        height: 300px;
+        border-radius: 0%;
+        object-fit: cover;
+    }
+
+    .slide-image {
+        width: 400px;
+        height: 300px;
+        object-fit: contain;
+    }
 }

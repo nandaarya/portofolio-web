@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portofolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
 </head>
 
 <body>
@@ -13,16 +14,22 @@
         <h1>Nanda Arya Putra</h1>
         <p>Coding · Studying · Gaming</p>
         <nav>
-            <a href="index.php">About Me</a>
-            <a href="about.php">My Project</a>
-            <a href="contact.php">Skill</a>
+            <a href="#about-me">
+                <h3>About Me</h3>
+            </a>
+            <a href="#my-project">
+                <h3>My Project</h3>
+            </a>
+            <a href="#skill">
+                <h3>Skill</h3>
+            </a>
         </nav>
     </header>
     <main class="main">
         <div class="content">
-            <article>
+            <article id="about-me">
                 <h2>About Me</h2>
-                <div class="about-me">
+                <div id="about-me-text">
                     <p>My name is Nanda Arya Putra, and I am currently a student at Sunan Kalijaga State Islamic
                         University majoring in Informatics. My primary focus is mobile development, particularly on the
                         Android platform. In addition to my specialization in mobile development, I have also gained
@@ -32,13 +39,13 @@
                         contribute to innovative projects and enhance my skills further.</p>
                 </div>
             </article>
-            <article>
+            <article id="my-project">
                 <h2>My Project</h2>
                 <div class="project-container">
                     <div class="project-item">
                         <img src="assets\image\tara.png" alt="TARA" class="project-image">
                         <h3>TARA</h3>
-                        <p>TARA or Tourist Attractions Recommender App is a free application that can help users find
+                        <p>TARA (Tourist Attractions Recommender App) is a free application that can help users find
                             suitable tourist attractions and provide transportation suggestions and ease of reaching
                             tourist locations.</p>
                     </div>
@@ -46,7 +53,8 @@
                         <img src="assets\image\sukame.png" alt="Suka Messenger" class="project-image">
                         <h3>Suka Messenger</h3>
                         <p>Suka Messenger is a real-time communication application designed to facilitate instant
-                            messaging between users. It allows for seamless text messaging and file sharing through
+                            messaging between users using websocket. It allows for seamless text messaging and file
+                            sharing through
                             various interfaces, including web and mobile applications. The system is built to ensure
                             fast and reliable communication.</p>
                     </div>
@@ -63,7 +71,7 @@
                     </div>
                 </div>
             </article>
-            <article>
+            <article id="skill">
                 <h2>Skill</h2>
                 <div class="skill-container">
                     <div id="skill-item">
@@ -95,15 +103,50 @@
                     </div>
                 </div>
             </article>
+            <article id="gallery">
+                <h2>Gallery</h2>
+                <div class="slideshow-container">
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="assets\image\gdsc.jpg" class="slide-image">
+                        <div class="text">Me and GDSC Core Team 2023</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="assets\image\bangkit.jpg" class="slide-image">
+                        <div class="text">Certificate of Completion Bangkit 2023 Batch 2</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="assets\image\summit.jpg" class="slide-image">
+                        <div class="text">GDSC Lead Summit 2023</div>
+                    </div>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </article>
         </div>
         <aside class="aside">
             <h2>Profile</h2>
-            <img src="assets\image\nanda.jpg" alt="Nanda Arya Putra" id="profile-image">
+            <div class="profile-image-container">
+                <img src="assets\image\nanda.jpg" alt="Nanda Arya Putra" id="profile-image">
+            </div>
             <p>Name: Nanda Arya Putra</p>
             <p>Age: 22</p>
-            <p>Education: Bachelor of Informatics</p>
             <p>Location: Yogyakarta, Indonesia</p>
             <p>Email: nandaarya404@gmail.com</p>
+            <h2>Education</h2>
+            <ul>
+                <li>Senior High School - SMA Negeri 1 Kudus (2017 - 2020)</li>
+                <li>Bachelor of Informatics - Sunan Kalijaga State Islamic University (2021 - Present) - GPA: 3.84</li>
+            </ul>
             <h2>Experience</h2>
             <ul>
                 <li>Front End Developer - Internship at Sevenpion (January 2023 - May 2023)</li>
@@ -124,6 +167,21 @@
                 <li><a href="https://www.dicoding.com/certificates/MEPJLK6YQZ3V" target="_blank">Machine Learning
                         Beginner</a></li>
             </ul>
+            <h2>Contact</h2>
+            <div class="contact-container">
+                <a href="https://www.linkedin.com/in/nandaaryaputra/" target="_blank">
+                    <img src="assets\image\linkedin.png" alt="LinkedIn" class="contact-image">
+                </a>
+                <a href="https://wa.me/6287829383635" target="_blank">
+                    <img src="assets\image\whatsapp.png" alt="Whatsapp" class="contact-image">
+                </a>
+                <a href="https://www.instagram.com/nandaaryaputra_27/" target="_blank">
+                    <img src="assets\image\instagram.png" alt="Instagram" class="contact-image">
+                </a>
+                <a href="https://github.com/nandaarya" target="_blank">
+                    <img src="assets\image\github.png" alt="Github" class="contact-image">
+                </a>
+            </div>
         </aside>
     </main>
     <footer class="footer">
